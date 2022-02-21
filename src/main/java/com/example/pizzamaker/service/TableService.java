@@ -1,4 +1,4 @@
-package com.example.pizzamaker.Service;
+package com.example.pizzamaker.service;
 
 import com.example.pizzamaker.model.Table;
 
@@ -15,10 +15,10 @@ public interface TableService {
     List<Table> readBySeatCount(int seatCount);
 
 
-    void create (Table table);
+    void create(Table table);
 
     Table update(int id, Table table);
 
-    void delete (int id);
+    void delete(int id);
 
 }

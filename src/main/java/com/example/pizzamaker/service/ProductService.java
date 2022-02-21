@@ -1,7 +1,6 @@
-package com.example.pizzamaker.Service;
+package com.example.pizzamaker.service;
 
 import com.example.pizzamaker.model.Product;
-import com.example.pizzamaker.model.Table;
 import com.example.pizzamaker.model.dto.ProductDto;
 
 import java.util.List;

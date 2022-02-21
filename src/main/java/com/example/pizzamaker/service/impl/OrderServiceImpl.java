@@ -1,11 +1,11 @@
-package com.example.pizzamaker.Service.impl;
+package com.example.pizzamaker.service.impl;
 
-import com.example.pizzamaker.Service.OrderService;
-import com.example.pizzamaker.Service.ProductService;
 import com.example.pizzamaker.model.Order;
 import com.example.pizzamaker.model.Product;
 import com.example.pizzamaker.model.dto.OrderDto;
 import com.example.pizzamaker.repository.OrderRepository;
+import com.example.pizzamaker.service.OrderService;
+import com.example.pizzamaker.service.ProductService;
 
 import java.util.LinkedList;
 import java.util.List;

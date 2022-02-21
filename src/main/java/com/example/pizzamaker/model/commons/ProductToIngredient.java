@@ -11,11 +11,11 @@ import lombok.*;
 
 public class ProductToIngredient {
 
-        private int id;
+    private int id;
 
-        private int ingredientId;
+    private int ingredientId;
 
-        private int productId;
+    private int productId;
 
 
 }

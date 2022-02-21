@@ -12,6 +12,33 @@ import java.util.List;
 
 public class TableRepository {
 
+    private static List<Table> mapperList(ResultSet resultSet) {
+        List<Table> data = new LinkedList<>();
+        try {
+            while (resultSet.next()) {
+                data.add(mapper(resultSet));
+            }
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
+        return data;
+    }
+
+    private static Table mapper(ResultSet resultSet) {
+        Table t = new Table();
+        try {
+            t.setId(resultSet.getInt("id"));
+            t.setNumber(resultSet.getInt("number"));
+            t.setSeats(resultSet.getInt("seats"));
+            t.setBusy(resultSet.getBoolean("is_busy"));
+
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
+        return t;
+
+    }
+
     public Table read(int id) {
         Connection connection = SQLConnector.getConnection();
         PreparedStatement pstmt = null;
@@ -24,19 +51,19 @@ public class TableRepository {
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
         }
-        Table table=null;
-        try{
-            while (resultSet.next()){
-                table=mapper(resultSet);
+        Table table = null;
+        try {
+            while (resultSet.next()) {
+                table = mapper(resultSet);
             }
-        }catch (SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        try{
+        try {
             pstmt.close();
             resultSet.close();
             connection.close();
-        }catch (SQLException sqlException){
+        } catch (SQLException sqlException) {
             sqlException.printStackTrace();
         }
         return table;
@@ -128,33 +155,6 @@ public class TableRepository {
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
-
-    }
-
-    private static List<Table> mapperList(ResultSet resultSet) {
-        List<Table> data = new LinkedList<>();
-        try {
-            while (resultSet.next()) {
-                data.add(mapper(resultSet));
-            }
-        } catch (SQLException sqlException) {
-            sqlException.printStackTrace();
-        }
-        return data;
-    }
-
-    private static Table mapper(ResultSet resultSet) {
-        Table t = new Table();
-        try {
-            t.setId(resultSet.getInt("id"));
-            t.setNumber(resultSet.getInt("number"));
-            t.setSeats(resultSet.getInt("seats"));
-            t.setBusy(resultSet.getBoolean("is_busy"));
-
-        } catch (SQLException sqlException) {
-            sqlException.printStackTrace();
-        }
-        return t;
 
     }
 

@@ -1,8 +1,8 @@
 package com.example.pizzamaker.controller;
 
-import com.example.pizzamaker.Service.ProductService;
-import com.example.pizzamaker.Service.impl.ProductServiceImpl;
 import com.example.pizzamaker.model.dto.ProductDto;
+import com.example.pizzamaker.service.ProductService;
+import com.example.pizzamaker.service.impl.ProductServiceImpl;
 import com.example.pizzamaker.util.AccessControlOriginFilter;
 import com.google.gson.Gson;
 

@@ -1,13 +1,13 @@
-package com.example.pizzamaker.Service.impl;
+package com.example.pizzamaker.service.impl;
 
-import com.example.pizzamaker.Service.TableService;
 import com.example.pizzamaker.model.Table;
 import com.example.pizzamaker.repository.TableRepository;
+import com.example.pizzamaker.service.TableService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TableServiceImpl implements TableService{
+public class TableServiceImpl implements TableService {
     private final TableRepository tableRepository = new TableRepository();
 
 

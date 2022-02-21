@@ -1,11 +1,10 @@
 package com.example.pizzamaker.controller;
 
-import com.example.pizzamaker.Service.OrderService;
-import com.example.pizzamaker.Service.impl.OrderServiceImpl;
 import com.example.pizzamaker.model.Order;
+import com.example.pizzamaker.service.OrderService;
+import com.example.pizzamaker.service.impl.OrderServiceImpl;
 import com.example.pizzamaker.util.AccessControlOriginFilter;
 import com.google.gson.Gson;
-
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

@@ -1,8 +1,8 @@
 package com.example.pizzamaker.controller;
 
-import com.example.pizzamaker.Service.IngredientService;
-import com.example.pizzamaker.Service.impl.IngredientServiceImpl;
 import com.example.pizzamaker.model.Ingredient;
+import com.example.pizzamaker.service.IngredientService;
+import com.example.pizzamaker.service.impl.IngredientServiceImpl;
 import com.example.pizzamaker.util.AccessControlOriginFilter;
 import com.google.gson.Gson;
 
@@ -65,9 +65,9 @@ public class IngredientController extends HttpServlet {
         AccessControlOriginFilter.setAccessControlHeaders(resp);
         Ingredient ingr = mapper(req);
 
-        Ingredient update = ingredientService.update(ingr.getId(),ingr);
-        if (update==null){
-            resp.sendError(400,"id not found for update object");
+        Ingredient update = ingredientService.update(ingr.getId(), ingr);
+        if (update == null) {
+            resp.sendError(400, "id not found for update object");
             return;
         }
         resp.getWriter().println(gson.toJson(update));
@@ -76,7 +76,7 @@ public class IngredientController extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         AccessControlOriginFilter.setAccessControlHeaders(resp);
-        int id= Integer.parseInt(req.getParameter("id"));
+        int id = Integer.parseInt(req.getParameter("id"));
         ingredientService.delete(id);
     }
 

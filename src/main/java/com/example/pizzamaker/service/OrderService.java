@@ -1,6 +1,5 @@
-package com.example.pizzamaker.Service;
+package com.example.pizzamaker.service;
 
-import com.example.pizzamaker.controller.OrderController;
 import com.example.pizzamaker.model.Order;
 import com.example.pizzamaker.model.dto.OrderDto;
 

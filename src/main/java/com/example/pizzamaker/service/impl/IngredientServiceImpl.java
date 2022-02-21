@@ -1,8 +1,8 @@
-package com.example.pizzamaker.Service.impl;
+package com.example.pizzamaker.service.impl;
 
-import com.example.pizzamaker.Service.IngredientService;
 import com.example.pizzamaker.model.Ingredient;
 import com.example.pizzamaker.repository.IngredientRepository;
+import com.example.pizzamaker.service.IngredientService;
 
 import java.util.List;
 

@@ -1,13 +1,12 @@
-package com.example.pizzamaker.Service.impl;
+package com.example.pizzamaker.service.impl;
 
-import com.example.pizzamaker.Service.ProductService;
 import com.example.pizzamaker.model.Ingredient;
 import com.example.pizzamaker.model.Product;
 import com.example.pizzamaker.model.commons.ProductToIngredient;
 import com.example.pizzamaker.model.dto.ProductDto;
 import com.example.pizzamaker.repository.ProductRepository;
 import com.example.pizzamaker.repository.ProductToIngredientRepository;
-
+import com.example.pizzamaker.service.ProductService;
 
 import java.util.LinkedList;
 import java.util.List;
